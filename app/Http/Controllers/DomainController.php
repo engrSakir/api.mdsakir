@@ -14,8 +14,8 @@ class DomainController extends Controller
         //
     }
 
-    public function availability($domain){
-        if(gethostbyname($domain) != $domain){
+    public function availability(){
+        if(gethostbyname(request()->domain) != request()->domain){
             return response()->json([
                 'type' => 'warning',
                 'message' => 'Domain is not availabe'

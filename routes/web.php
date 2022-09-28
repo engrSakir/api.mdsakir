@@ -19,6 +19,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('domain/availability/{domain}', 'DomainController@availability');
+$router->get('domain/availability', 'DomainController@availability');
 
 
